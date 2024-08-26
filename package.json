@@ -1,0 +1,20 @@
+{
+  "name": "be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "epass": "cd epass && npm run dev",
+    "econd": "cd econd && npm run dev",
+    "eadmin": "cd eadmin && npm run dev",
+    "erfid": "npm start --prefix ./erfid",
+    "ebend": "npm start --prefix ./ebend",
+    "ecopass": "concurrently -n epass,rfid,econd,backend,eadmin -c 'red,white,yellow,blue,green' \"npm run epass\" \"npm run erfid\" \"npm run econd\" \"npm run ebend\"  \"npm run eadmin\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
